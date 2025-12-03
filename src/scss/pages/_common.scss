@@ -305,10 +305,28 @@ picture {
 		background-image: url(/type-logo-white.svg);
 		background-repeat: no-repeat;
 		background-size: 100%;
-		background-position: center 115%;
+		background-position: center 112%;
 		background-blend-mode: soft-light;
+		@include media-x(1500px) {
+			background-position: center 110%;
+		}
+		@include media-x(1400px) {
+			background-position: center 108%;
+		}
+		@include media-x(1200px) {
+			background-position: center 105%;
+		}
+		@include media-x(992px) {
+			background-position: center 105%;
+		}
+		@include media-x(767px) {
+			background-position: center 103%;
+		}
 	}
 
+	@include media-x(992px) {
+		padding-block-end: 20rem;
+	}
 	@include media-x(767px) {
 		padding-block-end: 10rem;
 	}
@@ -355,8 +373,13 @@ picture {
 		inset-inline-start: 15%;
 		inset-block-start: 25%;
 		inline-size: min(70vw, 50rem);
-
-		@include media-x(767px) {
+		@include media-x(992px) {
+			inline-size: 90%;
+			max-inline-size: unset;
+			inset-inline-end: 1rem;
+			inset-block-start: 3rem;
+		}
+		@include media-x(600px) {
 			inline-size: 175%;
 			max-inline-size: unset;
 			inset-inline-start: 1rem;
@@ -367,7 +390,14 @@ picture {
 		inset-inline-end: 15%;
 		inset-block-end: 25%;
 		inline-size: min(70vw, 50rem);
-		@include media-x(767px) {
+
+		@include media-x(992px) {
+			inline-size: 90%;
+			max-inline-size: unset;
+			inset-inline-start: 0;
+			inset-block-end: 2rem;
+		}
+		@include media-x(545px) {
 			inline-size: 175%;
 			max-inline-size: unset;
 			inset-inline-start: 0;

@@ -239,7 +239,7 @@
 					id="home-section"
 				>
 					<div
-						class="fl-col jc-center al-center py-lg-9 h-full w-md-60 mx-auto"
+						class="fl-col jc-center al-center py-lg-9 h-full w-md-90 w-lg-80 w-xl-80 w-2xl-60 mx-auto"
 					>
 						<div class="hero__logo mb-2 neutral-100">
 							<svg
@@ -345,12 +345,14 @@
 				>
 					<div class="grid-md-row">
 						<h2
-							class="font-mono bold-15 uppercase col-start-md-8 mb-2 mb-md-0"
+							class="font-mono bold-15 uppercase col-md-2 col-start-lg-5 col-end-lg-7 col-start-2xl-8 mb-2 mb-md-0"
 							id="about-title"
 						>
 							About Us
 						</h2>
-						<div class="paragraph-wrapper col-md-4 neutral-400">
+						<div
+							class="paragraph-wrapper col-md-8 col-lg-5 col-2xl-4 neutral-400"
+						>
 							<p>
 								Nepaxis Technologies LLC is a UAE-based global technology
 								service provider specializing in high-performance engineering,
@@ -377,8 +379,8 @@
 					data-section="dark"
 				>
 					<picture>
+						<source srcset="/images/banner-1.png" media="(min-width:720px)" />
 						<img
-							srcset="/images/banner-1-m.png 1090w, /images/banner-1.png 1500w"
 							src="/images/banner-1-m.png"
 							class="work__image"
 							alt="Our Work Images"
@@ -394,8 +396,8 @@
 					<h2 class="heading-2 neutral-700 mb-2 mb-md-4" id="services-title">
 						Capabilities
 					</h2>
-					<div class="grid-lg-row gap-xl-10">
-						<div class="col-lg-8">
+					<div class="grid-lg-row gap-lg-6 gap-3xl-9">
+						<div class="col-lg-12 col-xl-8">
 							<table class="capabilities__table--sm regular-14 mb-4">
 								<tr>
 									<th
@@ -789,7 +791,7 @@
 								</tr>
 							</table>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-lg-5 col-xl-4">
 							<div class="paragraph-wrapper neutral-500 tracking-tight pe-lg-4">
 								<p>
 									You can catch all the details of our servcies by downloading
@@ -869,7 +871,7 @@
 							We follow Agile driven workflows that prioritize:
 						</p>
 						<ul
-							class="approach__list grid grid-template-col-2 gap-2 grid-lg-row strip-style"
+							class="approach__list grid grid-template-col-2 grid-template-col-ms-3 gap-2 grid-lg-row strip-style"
 						>
 							<li class="approach__item col-lg-2">
 								<div class="uppercase neutral-100">Continuous delivery</div>
@@ -935,7 +937,7 @@
 					</div>
 				</section>
 				<section
-					class="full-width mb-0 mb-md-9 mt-md-6 mt-xl-9 fs-image"
+					class="full-width mb-0 mb-3xl-4 mb-3xl-9 mt-md-6 mt-xl-9 fs-image"
 					data-section="light"
 				>
 					<picture>
@@ -947,7 +949,7 @@
 					</picture>
 				</section>
 				<section
-					class="contact__section pt-8 pb-4 py-md-8 py-xl-9"
+					class="contact__section pt-8 pt-md-9 pt-xl-10 pb-4 pb-md-8 py-2xl-9"
 					id="contact-section"
 					data-section="dark"
 					aria-labelledby="#contact-title"
@@ -1186,16 +1188,28 @@
 									Quick Links
 								</h6>
 								<div class="w-100 grid grid-template-col-lg-2 gap-1 w-70">
-									<a href="#about-section" class="regular-13 footer__link"
+									<a
+										href="#about-section"
+										data-scroll-to="#about-section"
+										class="regular-13 footer__link"
 										>About us</a
 									>
-									<a href="#services-section" class="regular-13 footer__link"
+									<a
+										href="#services-section"
+										class="regular-13 footer__link"
+										data-scroll-to="#services-section"
 										>Our Services</a
 									>
-									<a href="#approach-section" class="regular-13 footer__link"
+									<a
+										href="#approach-section"
+										class="regular-13 footer__link"
+										data-scroll-to="#approach-section"
 										>Our Approach</a
 									>
-									<a href="#contact-section" class="regular-13 footer__link"
+									<a
+										href="#contact-section"
+										class="regular-13 footer__link"
+										data-scroll-to="#contact-section"
 										>Contact Form</a
 									>
 								</div>
