@@ -144,7 +144,7 @@ export function initializeASCII() {
 
       // --- Mobile Logic (Locus Animation via rAF) ---
       mm.add("(max-width:991px)", () => {
-        const ascii_timeline = gsap.timeline({
+        gsap.timeline({
           scrollTrigger: {
             trigger: ".ascii__section",
             start: "top bottom",
