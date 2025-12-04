@@ -143,7 +143,7 @@ picture {
 
 .hero {
 	&__section {
-		--background: url("/images/hero-background.png");
+		// --background: url("/images/hero-background.png");
 		position: relative;
 		background: var(--background);
 		background-size: cover;
