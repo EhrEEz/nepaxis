@@ -143,8 +143,9 @@ picture {
 
 .hero {
 	&__section {
+		--background: url("/images/hero-background.png");
 		position: relative;
-		background: var(--background, none);
+		background: var(--background);
 		background-size: cover;
 		background-position: center;
 		min-height: 100svh;
