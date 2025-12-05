@@ -310,7 +310,7 @@ const menuItems: MenuItem[] = [];
 });
 
 // Function to animate the text inner elements on load
-export function showMenuItems(): void {
+export function initShowMenuImages(): void {
 	const textInners: HTMLElement[] = menuItems.map((item) =>
 		item.getTextInner()
 	);

@@ -259,6 +259,7 @@ picture {
 		background-position: center right;
 		min-block-size: 100dvh;
 		overflow: clip;
+		background-repeat: no-repeat;
 
 		@include media-x(991px) {
 			min-block-size: 100svh;

@@ -1,4 +1,4 @@
-import { NotificationModal } from "./modals";
+import { NotificationModal } from "../modals";
 
 document.addEventListener("DOMContentLoaded", () => {
 	const form = document.querySelector("#contactForm") as HTMLFormElement | null;
