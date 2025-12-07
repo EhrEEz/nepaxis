@@ -12,8 +12,8 @@ export function initApproachSectionAnimations() {
 		onSplit: (splitText) => {
 			const lines = splitText.lines;
 			return gsap.to(lines, {
-				stagger: 0.7,
-				duration: 1,
+				stagger: 1,
+				duration: 1.5,
 				ease: "none",
 				backgroundSize: "100%",
 				scrollTrigger: {
@@ -30,7 +30,7 @@ export function initApproachSectionAnimations() {
 		scrollTrigger: {
 			trigger: ".approach__section",
 			start: "top 90%",
-			end: "bottom 50%",
+			end: "bottom 30%",
 			toggleActions: "play none none none",
 			scrub: true,
 		},

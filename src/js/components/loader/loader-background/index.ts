@@ -34,6 +34,6 @@ export function initCanvas(): ReturnType<typeof setInterval> | false {
 		});
 	}
 
-	bgEffectInterval = setInterval(matrix, 10);
+	bgEffectInterval = setInterval(matrix, 70);
 	return bgEffectInterval;
 }

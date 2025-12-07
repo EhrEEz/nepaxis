@@ -4,6 +4,7 @@ import { initHeaderAnimations } from "./header-animations";
 import { initASCIIAnimations } from "./ascii";
 import { initShowMenuImages } from "./hover-image";
 import { initApproachSectionAnimations } from "./scroll-timelines/approach";
+import { initDraggable } from "./draggable";
 //start initializing animation modules
 
 export function initAnimations() {
@@ -15,6 +16,9 @@ export function initAnimations() {
 	// Temporarily here move this into individual scrollTrigger Animations to minimize performance load
 	initShowMenuImages();
 	initApproachSectionAnimations();
+	initDraggable();
+	// initHeroAnimations();
+
 	document.fonts.ready.then(() => {
 		initASCIIAnimations();
 	});
