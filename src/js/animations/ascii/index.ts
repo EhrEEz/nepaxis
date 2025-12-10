@@ -5,6 +5,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
+let mouseMoveHandler: {
+	(e: MouseEvent): void;
+	(this: Document, ev: MouseEvent): any;
+	(this: Document, ev: MouseEvent): any;
+};
 export function initASCIIAnimations() {
 	const asciiText = document.querySelector(".ascii__art");
 	if (typeof ascii !== "undefined" && asciiText) {
@@ -210,7 +215,7 @@ export function initASCIIAnimations() {
 			rAF_id = null;
 		};
 
-		const mouseMoveHandler = (e: MouseEvent) => {
+		mouseMoveHandler = (e: MouseEvent) => {
 			mousePos.x = e.pageX;
 			mousePos.y = e.pageY;
 
@@ -227,4 +232,8 @@ export function initASCIIAnimations() {
 			if (rAF_id) cancelAnimationFrame(rAF_id);
 		};
 	});
+}
+
+export function destroyASCIIAnimation() {
+	document.removeEventListener("mousemove", mouseMoveHandler);
 }

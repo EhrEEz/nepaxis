@@ -1,3 +1,5 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { initSmoothScroll } from "./smooth-scroll";
 import { initLazyLoadImages } from "./lazy-load";
 import { initHeaderAnimations } from "./header-animations";
@@ -5,26 +7,41 @@ import { initASCIIAnimations } from "./ascii";
 import { initShowMenuImages } from "./hover-image";
 import { initApproachSectionAnimations } from "./scroll-timelines/approach";
 import { initDraggable } from "./draggable";
-import { initTextScramble } from "./text-scramble";
-//start initializing animation modules
+import { initHeroTimeline } from "./scroll-timelines/hero";
+import { initAboutTimeline } from "./scroll-timelines/about";
+import { initAsciiTimeline } from "./scroll-timelines/logo";
+import { initShuffleButtonHover } from "./shuffle";
+import { loaded } from "../components/loader";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function initAnimations() {
-  // this is required throughout the timeline
-  initSmoothScroll();
-  initLazyLoadImages();
-  initHeaderAnimations();
+	initSmoothScroll();
+	initLazyLoadImages();
+	initHeaderAnimations();
+	initShuffleButtonHover();
 
-  // Temporarily here move this into individual scrollTrigger Animations to minimize performance load
-  initShowMenuImages();
-  initApproachSectionAnimations();
-  initDraggable();
-  // initHeroAnimations();
+	initShowMenuImages();
+	initDraggable();
 
-  document.fonts.ready.then(() => {
-    initASCIIAnimations();
-    initTextScramble();
-  });
+	document.fonts.ready.then(() => {
+		initHeroTimeline();
+		initASCIIAnimations();
+		initApproachSectionAnimations();
+		initAboutTimeline();
+		initAsciiTimeline();
+	});
+	ScrollTrigger.getAll().forEach((trigger) => {
+		trigger.disable(true);
+	});
 }
+
+loaded.then(() => {
+	ScrollTrigger.getAll().forEach((trigger) => {
+		trigger.enable(false);
+		trigger.refresh();
+	});
+});
 
 //we will defer playing section animations after load.
 

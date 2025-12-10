@@ -63,26 +63,48 @@ a.link {
 .font-mono {
 	font-family: $code-font-stack;
 }
-.ascii__section {
-	width: 100%;
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 2rem;
+.ascii {
+	&__section {
+		width: 100%;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem;
+	}
+	&__card {
+		inline-size: 100%;
+		border-radius: 2rem;
+		background-color: var(--clr-neutral-700);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-inline: 2rem;
+		perspective: 500px;
+		@extend .py-2;
+
+		@include media(768px) {
+			padding-block: 8rem;
+		}
+		@include media(1200px) {
+			padding-block: 14rem;
+		}
+	}
+	&__art {
+		color: var(--clr-neutral-500);
+		font-family: "Google Sans Code", monospace;
+		white-space: pre-line;
+		mix-blend-mode: difference;
+
+		@media screen and (max-width: 991px) {
+			font-size: 0.75rem;
+		}
+		@media screen and (max-width: 545px) {
+			font-size: 0.4rem;
+		}
+	}
 }
-
-.ascii__art {
-	color: var(--clr-neutral-500);
-	font-family: "Google Sans Code", monospace;
-	white-space: pre-line;
-
-	@media screen and (max-width: 991px) {
-		font-size: 0.75rem;
-	}
-	@media screen and (max-width: 545px) {
-		font-size: 0.4rem;
-	}
+.ascii__section {
 }
 
 .strip-style {

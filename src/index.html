@@ -279,7 +279,7 @@
 						</div>
 						<h2 class="hero__title heading-1 text-center mb-3" id="home-title">
 							<span class="sr-only">Nepaxis</span>
-							<span class="visible-text scramble__item">
+							<span class="visible-text">
 								Empowering your digital journey
 							</span>
 						</h2>
@@ -289,7 +289,7 @@
 							<a
 								href="#services-section"
 								data-scroll-to="#services-section"
-								class="btn--outline btn--inverse order-1 order-md-0"
+								class="btn--outline btn--inverse order-1 order-md-0 hero__link"
 							>
 								<span class="btn__wrapper">
 									<span class="btn__text">Services</span>
@@ -307,7 +307,7 @@
 							<a
 								href="#contact-section"
 								data-scroll-to="#contact-section"
-								class="btn--primary order-2 order-md-2"
+								class="btn--primary order-2 order-md-2 hero__link"
 							>
 								<span class="btn__wrapper">
 									<span class="btn__text">Let's Talk</span>
@@ -346,13 +346,13 @@
 				>
 					<div class="grid-md-row">
 						<h2
-							class="font-mono bold-15 uppercase col-md-2 col-start-lg-5 col-end-lg-7 col-start-2xl-8 mb-2 mb-md-0"
+							class="about__title font-mono bold-15 uppercase col-md-2 col-start-lg-5 col-end-lg-7 col-start-2xl-8 mb-2 mb-md-0"
 							id="about-title"
 						>
 							About Us
 						</h2>
 						<div
-							class="paragraph-wrapper col-md-8 col-lg-5 col-2xl-4 neutral-400"
+							class="about__paragraph paragraph-wrapper col-md-8 col-lg-5 col-2xl-4 neutral-400"
 						>
 							<p>
 								Nepaxis Technologies LLC is a UAE-based global technology
@@ -370,15 +370,15 @@
 					</div>
 				</section>
 				<section
-					class="ascii__section my-4 my-md-6 my-xl-9"
+					class="ascii__section full-width content-grid"
 					data-section="dark"
 				>
-					<div class="ascii__art"></div>
+					<!-- my-4 my-md-6 my-xl-9 -->
+					<div class="ascii__card">
+						<div class="ascii__art"></div>
+					</div>
 				</section>
-				<section
-					class="full-width mt-4 mt-md-6 mt-xl-9 fs-image"
-					data-section="dark"
-				>
+				<section class="full-width fs-image" data-section="dark">
 					<picture>
 						<source srcset="/images/banner-1.png" media="(min-width:720px)" />
 						<img
@@ -1182,7 +1182,9 @@
 									class="big__button-wrapper fl-col jc-end w-100 col-start-lg-8 col-end-lg-12"
 								>
 									<button class="btn--primary w-100 btn--full" type="submit">
-										Send
+										<span class="btn__wrapper"
+											><span class="btn__text"> Send </span></span
+										>
 									</button>
 								</div>
 							</div>

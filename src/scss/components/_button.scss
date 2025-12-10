@@ -301,6 +301,8 @@
 				letter-spacing: 0.28125rem;
 				text-transform: uppercase;
 				padding-block-start: 0.3em;
+				font-kerning: none;
+				font-feature-settings: "liga" 0;
 			}
 			&__icon {
 				inline-size: 2rem;

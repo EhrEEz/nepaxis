@@ -26,7 +26,7 @@ export async function initLoading() {
 
 	const fakeLoading = gsap.to(progress, {
 		value: 90,
-		duration: 3,
+		duration: 1,
 		ease: "power1.out",
 		onUpdate: () => {
 			loaderPercent.textContent = Math.floor(progress.value) + "%";
@@ -47,9 +47,11 @@ export async function initLoading() {
 					opacity: 0,
 					duration: 1,
 					ease: "ease",
+					onStart: () => {
+						resolveLoaded(true);
+					},
 					onComplete: () => {
 						loader.remove();
-						resolveLoaded(true);
 					},
 				});
 				if (bgEffectInterval) {
