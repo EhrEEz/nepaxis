@@ -5,13 +5,15 @@ import { initLazyLoadImages } from "./lazy-load";
 import { initHeaderAnimations } from "./header-animations";
 import { initASCIIAnimations } from "./ascii";
 import { initShowMenuImages } from "./hover-image";
-import { initApproachSectionAnimations } from "./scroll-timelines/approach";
 import { initDraggable } from "./draggable";
+import { initShuffleButtonHover } from "./shuffle";
+import { loaded } from "../components/loader";
+
 import { initHeroTimeline } from "./scroll-timelines/hero";
 import { initAboutTimeline } from "./scroll-timelines/about";
 import { initAsciiTimeline } from "./scroll-timelines/logo";
-import { initShuffleButtonHover } from "./shuffle";
-import { loaded } from "../components/loader";
+import { initCapabilitiesTimeline } from "./scroll-timelines/capabilities";
+import { initApproachSectionAnimations } from "./scroll-timelines/approach";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,6 +32,7 @@ export function initAnimations() {
 		initApproachSectionAnimations();
 		initAboutTimeline();
 		initAsciiTimeline();
+		initCapabilitiesTimeline();
 	});
 	ScrollTrigger.getAll().forEach((trigger) => {
 		trigger.disable(true);

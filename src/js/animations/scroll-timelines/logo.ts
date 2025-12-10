@@ -1,13 +1,12 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { destroyASCIIAnimation, initASCIIAnimations } from "../ascii";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function initAsciiTimeline() {
 	const asciiTimeline = gsap
 		.timeline({
-			scrollTrigger: ".ascii__section",
+			trigger: ".ascii__section",
 			start: "top 80%",
 			toggleActions: "play none none none",
 		})
@@ -33,14 +32,13 @@ export function initAsciiTimeline() {
 			onEnter: () => {
 				const art = document.querySelector(".ascii__art")! as HTMLElement;
 				art.style.pointerEvents = "none";
-				destroyASCIIAnimation();
 			},
 			onEnterBack: () => {
 				console.log("now");
 				const art = document.querySelector(".ascii__art")! as HTMLElement;
 				art.style.pointerEvents = "auto";
-				initASCIIAnimations();
 			},
 		},
 	});
+	asciiTimeline.scrollTrigger?.disable(true);
 }
