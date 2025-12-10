@@ -1,6 +1,6 @@
 import { NotificationModal } from "../modals";
 
-document.addEventListener("DOMContentLoaded", () => {
+export function handleContact() {
 	const form = document.querySelector("#contactForm") as HTMLFormElement | null;
 	if (!form) return;
 
@@ -146,4 +146,4 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		}
 	});
-});
+}
