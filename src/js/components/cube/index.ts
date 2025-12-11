@@ -27,7 +27,7 @@ const INTERACTION_ROTATION_VALUE = 300;
 // --- GSAP ScrollTrigger Variables ---
 let scrollProgress = 0;
 const LERP_FACTOR = 0.05;
-const SCROLL_DAMPENING_FACTOR = 0.2;
+const SCROLL_DAMPENING_FACTOR = 0.1;
 
 // --- Helper Functions ---
 
@@ -176,10 +176,6 @@ export function initCube() {
 		return;
 	}
 
-	// Initialize the background color (e.g., to a default gray or white)
-	cubeContainer?.style.setProperty("--background", `hsl(0 0% 90% / 90%)`);
-
-	// 1. Mouse/Pointer Events
 	cubeContainer.addEventListener("mousemove", handleMouseMove);
 	cubeContainer.addEventListener("mouseenter", handleInteractionEnter);
 	cubeContainer.addEventListener("mouseleave", handleInteractionLeave);
@@ -197,8 +193,8 @@ export function initCube() {
 
 	// 3. GSAP ScrollTrigger Setup
 	ScrollTrigger.create({
-		trigger: "body",
-		start: "top top",
+		trigger: ".capabilities__section",
+		start: "top bottom",
 		end: "bottom top",
 		onUpdate: (self) => {
 			scrollProgress = self.progress;

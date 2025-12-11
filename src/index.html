@@ -1032,9 +1032,9 @@
 							We follow Agile driven workflows that prioritize:
 						</p>
 						<ul
-							class="approach__list grid grid-template-col-2 grid-template-col-ms-3 gap-1 gap-md-2 grid-lg-row strip-style"
+							class="approach__list grid grid-template-col-2 grid-template-col-ms-3 grid-template-col-lg-6 gap-1 gap-md-2 gap-lg-1 col-gap-2xl-1 grid-2xl-row strip-style"
 						>
-							<li class="approach__item col-lg-2">
+							<li class="approach__item col-2xl-2">
 								<div class="uppercase neutral-100 approach__item-text">
 									Continuous delivery
 								</div>
@@ -1045,7 +1045,7 @@
 									aria-role="presentation"
 								/>
 							</li>
-							<li class="approach__item col-lg-2">
+							<li class="approach__item col-2xl-2">
 								<div class="uppercase neutral-100 approach__item-text">
 									Scalable architecture
 								</div>
@@ -1056,7 +1056,7 @@
 									aria-role="presentation"
 								/>
 							</li>
-							<li class="approach__item col-lg-2">
+							<li class="approach__item col-2xl-2">
 								<div class="uppercase neutral-100 approach__item-text">
 									Security-by-design
 								</div>
@@ -1067,7 +1067,7 @@
 									aria-role="presentation"
 								/>
 							</li>
-							<li class="approach__item col-lg-2">
+							<li class="approach__item col-2xl-2">
 								<div class="uppercase neutral-100 approach__item-text">
 									Transparent collaboration
 								</div>
@@ -1078,7 +1078,7 @@
 									aria-role="presentation"
 								/>
 							</li>
-							<li class="approach__item col-lg-2">
+							<li class="approach__item col-2xl-2">
 								<div class="uppercase neutral-100 approach__item-text">
 									Data-informed iterations
 								</div>
@@ -1089,7 +1089,7 @@
 									aria-role="presentation"
 								/>
 							</li>
-							<li class="approach__item col-lg-2">
+							<li class="approach__item col-2xl-2">
 								<div class="uppercase neutral-100 approach__item-text">
 									Long-term maintainability
 								</div>
@@ -1116,22 +1116,27 @@
 					</picture>
 				</section>
 				<section
-					class="contact__section pt-8 pt-md-9 pt-xl-10 pb-4 pb-md-8 py-2xl-9"
+					class="contact__section pt-8 pt-md-9 pt-xl-10 pb-4 pb-md-8 py-2xl-9 relative"
 					id="contact-section"
 					data-section="dark"
 					aria-labelledby="#contact-title"
 				>
 					<div class="content__wrapper relative z-1">
-						<h2 class="heading-2 uppercase mb-4" id="contact-title">
+						<h2
+							class="heading-2 uppercase mb-4 contact__title"
+							id="contact-title"
+						>
 							Let's Talk
 						</h2>
 						<form
 							id="contactForm"
-							class="contact__form mb-lg-9 mb-6 mb-lg-4"
+							class="contact__form mb-lg-9 mb-6 mb-lg-8"
 							method="post"
 						>
 							<div class="grid-lg-row">
-								<div class="fl-col row-gap-3 col-gap-2 col-lg-6 mb-3 mb-lg-0">
+								<div
+									class="fl-col row-gap-3 col-gap-2 col-xl-8 col-2xl-6 mb-3 mb-lg-0"
+								>
 									<label for="fullName" class="form__group">
 										<div class="form__line">
 											<div
@@ -1237,11 +1242,11 @@
 									</label>
 								</div>
 								<div
-									class="big__button-wrapper fl-col jc-end w-100 col-start-lg-8 col-end-lg-12"
+									class="big__button-wrapper fl-col jc-end w-100 col-start-xl-9 col-start-2xl-8 col-end-xl-13"
 								>
 									<button class="btn--primary w-100 btn--full" type="submit">
 										<span class="btn__wrapper"
-											><span class="btn__text"> Send </span></span
+											><span class="btn__text"> Send Message</span></span
 										>
 									</button>
 								</div>
@@ -1312,7 +1317,7 @@
 					</div>
 				</section>
 				<footer
-					class="bg-neutral-100 neutral-700 content-grid full-width py-2 pt-md-2 pt-lg-0"
+					class="bg-neutral-100 neutral-700 content-grid full-width py-2 pt-md-2 pt-lg-0 footer__section"
 					data-section="light"
 				>
 					<div class="grid-md-row pt-4 pb-2 py-md-5 py-lg-7 ai-center">
@@ -1445,6 +1450,7 @@
 				</footer>
 			</div>
 		</main>
+
 		<div id="loader" class="loading__screen">
 			<div id="loader-percent" class="loading__value"></div>
 			<canvas id="loading-matrix" class="loading__background"></canvas>

@@ -96,5 +96,7 @@ export function initApproachSectionAnimations() {
 			ease: "back.out",
 			duration: 3,
 		}).addLabel("start");
+		tl.scrollTrigger?.disable(true);
 	});
+	approachSectionTimeline.scrollTrigger?.disable(true);
 }

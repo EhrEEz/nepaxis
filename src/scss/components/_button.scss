@@ -255,7 +255,7 @@
 		--_size: 2.5rem;
 		--_pad-y: 1em;
 
-		@include mxn.media-x(991px) {
+		@include mxn.media-x(1400px) {
 			--_size: 1.5rem;
 		}
 	}

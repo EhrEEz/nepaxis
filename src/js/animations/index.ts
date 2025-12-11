@@ -14,6 +14,8 @@ import { initAboutTimeline } from "./scroll-timelines/about";
 import { initAsciiTimeline } from "./scroll-timelines/logo";
 import { initCapabilitiesTimeline } from "./scroll-timelines/capabilities";
 import { initApproachSectionAnimations } from "./scroll-timelines/approach";
+import { initContactTimeline } from "./scroll-timelines/contact";
+import { initFooterTimeline } from "./scroll-timelines/footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,6 +27,7 @@ export function initAnimations() {
 
 	initShowMenuImages();
 	initDraggable();
+	initFooterTimeline();
 
 	document.fonts.ready.then(() => {
 		initHeroTimeline();
@@ -33,6 +36,7 @@ export function initAnimations() {
 		initAboutTimeline();
 		initAsciiTimeline();
 		initCapabilitiesTimeline();
+		initContactTimeline();
 	});
 	ScrollTrigger.getAll().forEach((trigger) => {
 		trigger.disable(true);

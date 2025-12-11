@@ -11,6 +11,10 @@ body {
 	scroll-padding-top: 5rem;
 }
 
+section {
+	position: relative;
+}
+
 a.link {
 	text-decoration: underline;
 	color: var(--clr-neutral-400);
@@ -547,4 +551,10 @@ picture {
 			transform: rotateY(90deg) translateZ(var(--z-translate));
 		}
 	}
+}
+
+#smooth-content {
+	z-index: 1;
+	position: relative;
+	background-color: var(--clr-neutral-700);
 }
