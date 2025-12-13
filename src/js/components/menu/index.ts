@@ -1,3 +1,5 @@
+import { handleSingleShuffle } from "../../animations/shuffle";
+
 export function initNavBar(): void {
 	const menuWrapper: HTMLDivElement | null =
 		document.querySelector(".nav__main");
@@ -14,7 +16,7 @@ export function initNavBar(): void {
 		console.warn("Navigation menu button not found (.menu__btn).");
 		return;
 	}
-	const buttonText = menuButton.querySelector(".btn__text");
+	const buttonText = menuButton.querySelector(".btn__text") as HTMLElement;
 
 	const navLinks: NodeListOf<HTMLAnchorElement> =
 		menuWrapper.querySelectorAll(".nav__list-link");
@@ -29,6 +31,7 @@ export function initNavBar(): void {
 			} else {
 				buttonText.textContent = "Menu";
 			}
+			handleSingleShuffle(buttonText);
 		}
 	});
 	document.addEventListener("click", function (e: MouseEvent): void {
@@ -37,6 +40,7 @@ export function initNavBar(): void {
 				menuWrapper.classList.remove("nav--toggled");
 				if (buttonText) {
 					buttonText.textContent = "Menu";
+					handleSingleShuffle(buttonText);
 				}
 			}
 		}
@@ -46,6 +50,7 @@ export function initNavBar(): void {
 			menuWrapper.classList.remove("nav--toggled");
 			if (buttonText) {
 				buttonText.textContent = "Menu";
+				handleSingleShuffle(buttonText);
 			}
 		});
 	});
@@ -54,6 +59,7 @@ export function initNavBar(): void {
 			menuWrapper.classList.remove("show__list");
 			if (buttonText) {
 				buttonText.textContent = "Menu";
+				handleSingleShuffle(buttonText);
 			}
 		}
 	});

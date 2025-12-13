@@ -52,9 +52,15 @@ export function initApproachSectionAnimations() {
 		});
 	});
 
-	approachSectionTimeline.addLabel("start").to(".approach__title", {
+	gsap.to(".approach__title", {
 		duration: 0.8,
 		opacity: 1,
+		scrollTrigger: {
+			trigger: ".approach__section",
+			start: "top 90%",
+			end: "bottom 30%",
+			toggleActions: "play pause resume reset",
+		},
 		scrambleText: {
 			text: "{original}",
 			chars: "upperAndLowerCase",
@@ -62,7 +68,7 @@ export function initApproachSectionAnimations() {
 			speed: 0.8,
 		},
 	});
-	approachSectionTimeline.fromTo(
+	approachSectionTimeline.addLabel("start").fromTo(
 		".approach__subtitle",
 		{
 			opacity: 0,
@@ -89,7 +95,6 @@ export function initApproachSectionAnimations() {
 				scrub: true,
 			},
 		});
-
 		tl.from(item, {
 			yPercent: 50,
 			opacity: 0.2,
