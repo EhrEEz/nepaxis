@@ -8,8 +8,11 @@ export function initHeroTimeline() {
 		.timeline({
 			scrollTrigger: {
 				trigger: ".hero__section",
-				start: "top 20%",
-				toggleActions: "play pause resume none",
+				start: "top 100%",
+				toggleActions: "play pause resume reset",
+				onEnter: () => {
+					console.log("entered");
+				},
 			},
 		})
 		.addLabel("start");

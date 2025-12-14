@@ -123,15 +123,17 @@
 				background-color: hsl(from var(--clr-neutral-700) h s l / 10%);
 			}
 			&:autofill {
-				border: 1px solid hsl(0 0% 100% / 15%);
-				-webkit-box-shadow: 0 0 0 5rem hsl(0 0% 10% / 100%) inset !important;
-				-webkit-text-fill-color: var(--clr-neutral-600) !important;
+				border: 1px solid var(--clr-neutral-300);
+				-webkit-box-shadow: 0 0 0 5rem
+					hsl(from var(--clr-neutral-700) h s l / 5%) inset !important;
+				-webkit-text-fill-color: var(--clr-neutral-700) !important;
 			}
 
 			&:-webkit-autofill {
-				border: 1px solid hsl(0 0% 100% / 15%);
-				-webkit-box-shadow: 0 0 0 5rem hsl(0 0% 10% / 100%) inset !important;
-				-webkit-text-fill-color: var(--clr-neutral-600) !important;
+				border: 1px solid var(--clr-neutral-300);
+				-webkit-box-shadow: 0 0 0 5rem
+					hsl(from var(--clr-neutral-700) h s l / 5%) inset !important;
+				-webkit-text-fill-color: var(--clr-neutral-700) !important;
 			}
 		}
 	}
