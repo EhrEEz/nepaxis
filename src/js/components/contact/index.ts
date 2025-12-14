@@ -48,11 +48,6 @@ export function handleContact() {
 			isValid = false;
 		}
 
-		if (!companyName.value.trim()) {
-			setError(companyName, "Company Name is required");
-			isValid = false;
-		}
-
 		if (!email.value.trim()) {
 			setError(email, "Email is required");
 			isValid = false;

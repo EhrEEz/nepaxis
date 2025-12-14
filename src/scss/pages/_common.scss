@@ -490,17 +490,20 @@ picture {
 	&-container {
 		--width: 15rem;
 		--z-translate: calc(var(--width) / 2);
-		--background: lightcyan;
+		--background: var(--set-ui-highlight-color);
 		perspective: calc(var(--width) * 3.33);
 		padding: 4rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		inline-size: 100%;
-		min-block-size: 70svh;
+		// min-block-size: 70svh;
 		@include media(992px) {
 			min-block-size: unset;
 			aspect-ratio: 1;
+		}
+		@include media-x(545px) {
+			margin-block-start: 2rem;
 		}
 		transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
 
@@ -515,7 +518,7 @@ picture {
 		}
 	}
 	&-face {
-		inline-size: var(--width);
+		inline-size: min(var(--width), 100%);
 		aspect-ratio: 1;
 		font-family: $code-font-stack;
 		color: var(--clr-neutral-700);
