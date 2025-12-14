@@ -98,7 +98,4 @@ export function initHeroTimeline() {
 	);
 
 	heroTimeline.scrollTrigger?.disable(true);
-	// loaded.then(() => {
-	// 	heroTimeline.scrollTrigger?.enable();
-	// });
 }

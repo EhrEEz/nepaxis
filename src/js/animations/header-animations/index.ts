@@ -46,3 +46,7 @@ export function initHeaderAnimations(): void {
 		});
 	});
 }
+
+window.addEventListener("resize", () => {
+	initHeaderAnimations();
+});
