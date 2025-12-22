@@ -109,8 +109,6 @@ a.link {
 		}
 	}
 }
-.ascii__section {
-}
 
 .strip-style {
 	&:is(ul) {
@@ -324,12 +322,7 @@ picture {
 	&__text {
 		.line {
 			color: hsl(from var(--clr-neutral-400) h s l / 20%);
-			background: linear-gradient(
-					to right,
-					var(--clr-neutral-100),
-					var(--clr-neutral-100)
-				)
-				no-repeat;
+			background: linear-gradient(to right, var(--clr-neutral-100), var(--clr-neutral-100)) no-repeat;
 			-webkit-background-clip: text;
 			background-clip: text;
 			background-size: 0%;
@@ -422,7 +415,7 @@ picture {
 		inset-inline-start: 15%;
 		inset-block-start: 25%;
 		inline-size: min(70vw, 50rem);
-		@include media-x(992px) {
+		@include media-x(745px) {
 			inline-size: 90%;
 			max-inline-size: unset;
 			inset-inline-end: 1rem;
@@ -440,13 +433,13 @@ picture {
 		inset-block-end: 25%;
 		inline-size: min(70vw, 50rem);
 
-		@include media-x(992px) {
+		@include media-x(745px) {
 			inline-size: 90%;
 			max-inline-size: unset;
 			inset-inline-start: 0;
 			inset-block-end: 2rem;
 		}
-		@include media-x(545px) {
+		@include media-x(600px) {
 			inline-size: 175%;
 			max-inline-size: unset;
 			inset-inline-start: 0;
@@ -492,15 +485,19 @@ picture {
 		--z-translate: calc(var(--width) / 2);
 		--background: var(--set-ui-highlight-color);
 		perspective: calc(var(--width) * 3.33);
-		padding: 4rem;
+		padding: 2rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		inline-size: 100%;
 		// min-block-size: 70svh;
+
 		@include media(992px) {
 			min-block-size: unset;
 			aspect-ratio: 1;
+		}
+		@include media(1300px) {
+			padding: 4rem;
 		}
 		@include media-x(545px) {
 			margin-block-start: 2rem;
@@ -553,6 +550,22 @@ picture {
 		&.right {
 			transform: rotateY(90deg) translateZ(var(--z-translate));
 		}
+	}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+	.capabilities__aside {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	.brochure__content {
+		inline-size: 40%;
+		order: 1;
+	}
+	.cube-container {
+		inline-size: 50%;
+		order: 0;
 	}
 }
 

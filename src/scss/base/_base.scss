@@ -15,7 +15,7 @@
 body,
 html {
 	font-family: $text-font-stack;
-	font-feature-settings: "ss02" on;
+	font-feature-settings: "ss01" 0, "ss02" 1, "ss03" 1, "ss04" 1, "ss05" 1;
 	font-size: var(--set-default-font-size);
 	letter-spacing: var(--set-default-letter-spacing);
 }
