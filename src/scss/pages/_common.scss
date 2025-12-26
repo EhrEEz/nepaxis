@@ -310,8 +310,9 @@ picture {
 		img {
 			position: absolute;
 			inset-inline-start: 0;
-			inset-block-end: 1rem;
-			transform: translate(-10%) scale(1.1);
+			inset-block-end: 0;
+			transform-origin: center bottom;
+			transform: scale(1.6);
 		}
 	}
 	&__title {
