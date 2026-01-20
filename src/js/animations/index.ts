@@ -47,6 +47,9 @@ loaded.then(() => {
 	ScrollTrigger.getAll().forEach((trigger) => {
 		trigger.enable(false);
 		trigger.refresh();
+		if (trigger.isActive) {
+			trigger.animation?.play();
+		}
 	});
 });
 

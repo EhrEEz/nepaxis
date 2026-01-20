@@ -48,8 +48,8 @@ export function handleContact() {
 			isValid = false;
 		}
 
-		if (!companyName.value.trim()) {
-			setError(companyName, "Company Name is required");
+		if (companyName.value.trim() && companyName.value.trim().length < 2) {
+			setError(companyName, "Company Name must be at least 2 characters");
 			isValid = false;
 		}
 

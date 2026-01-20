@@ -8,8 +8,8 @@ This README explains the purpose of the main files and folders in the repository
 
 ## External Services Used
 
-1. Mailchimp For Newsletter Service
-2. Web3Forms for Submitting Contact Form
+1. **Mailchimp** for _Newsletter Service_
+2. **Web3Forms** for _Submitting Contact Form_
 
 ## Dependencies
 

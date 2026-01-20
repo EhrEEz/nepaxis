@@ -59,9 +59,7 @@ export function initCapabilitiesTimeline() {
 	const mm = gsap.matchMedia();
 
 	mm.add("(max-width:767px", () => {
-		const tableItems = gsap.utils.toArray(
-			".capabilities__table--sm tr"
-		) as HTMLElement[];
+		const tableItems = gsap.utils.toArray(".capabilities__table--sm tr") as HTMLElement[];
 		tableItems.forEach((item) => {
 			item.dataset.scrambled = "false";
 			gsap.from(item, {
@@ -71,7 +69,7 @@ export function initCapabilitiesTimeline() {
 				ease: "power1.out",
 				scrollTrigger: {
 					trigger: item,
-					start: "top 60%",
+					start: "top 30%",
 					toggleActions: "play none none none",
 					onEnter: () => {
 						if (item.dataset.scrambled === "true") {
@@ -99,9 +97,7 @@ export function initCapabilitiesTimeline() {
 		});
 	});
 	mm.add("(min-width:768px", () => {
-		const tableItems = gsap.utils.toArray(
-			".capabilities__table--md tr,.capabilities__table--md th"
-		) as HTMLElement[];
+		const tableItems = gsap.utils.toArray(".capabilities__table--md tr,.capabilities__table--md th") as HTMLElement[];
 		tableItems.forEach((item) => {
 			item.dataset.scrambled = "false";
 			gsap.from(item, {
@@ -111,7 +107,7 @@ export function initCapabilitiesTimeline() {
 				ease: "power1.out",
 				scrollTrigger: {
 					trigger: item,
-					start: "top 60%",
+					start: "top 80%",
 					toggleActions: "play none none none",
 					onEnter: () => {
 						if (item.dataset.scrambled === "true") {
