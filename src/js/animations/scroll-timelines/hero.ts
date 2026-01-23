@@ -10,9 +10,6 @@ export function initHeroTimeline() {
 				trigger: ".hero__section",
 				start: "top 100%",
 				toggleActions: "play pause resume reset",
-				onEnter: () => {
-					console.log("entered");
-				},
 			},
 		})
 		.addLabel("start");
@@ -51,7 +48,7 @@ export function initHeroTimeline() {
 					duration: 0.6,
 					ease: "power1.out",
 				},
-				"start+=0.3"
+				"start+=0.3",
 			);
 		},
 	});
@@ -63,7 +60,7 @@ export function initHeroTimeline() {
 			duration: 0.6,
 			ease: "power2.out",
 		},
-		"start+=1"
+		"start+=1",
 	);
 	heroTimeline.from(
 		".hero__link",
@@ -73,7 +70,7 @@ export function initHeroTimeline() {
 			duration: 0.8,
 			ease: "power2.out",
 		},
-		"start+=1"
+		"start+=1",
 	);
 	heroTimeline.from(
 		".hero__times p",
@@ -85,7 +82,7 @@ export function initHeroTimeline() {
 				each: 0.2,
 			},
 		},
-		"start+=1.25"
+		"start+=1.25",
 	);
 	heroTimeline.from(
 		".hero__scroll",
@@ -94,7 +91,7 @@ export function initHeroTimeline() {
 			duration: 0.4,
 			ease: "power1.out",
 		},
-		"start+=1.25"
+		"start+=1.25",
 	);
 
 	heroTimeline.scrollTrigger?.disable(true);
